@@ -1,8 +1,35 @@
-<header class="sticky top-0 z-30 flex h-20 items-center">
+
+{% set headerClasses = "top-0 z-30 flex items-center transition-height duration-500 delay-150" %}
+{% if underHeader is defined %} {# can be set from any page; determines whether page flow should start below the header or under the header; default below #}
+  <header class="fixed w-screen {{ headerClasses }} before:backdrop-hack before:duration-500 before:delay-150 before:transition" :class="top ? 'h-10' : 'h-9 before:bg-base-800/50 before:backdrop-blur-md'">
+{% else %}
+  <header class="sticky bg-base-800 {{ headerClasses }}" :class="top ? 'h-10' : 'h-9'">
+{% endif %}
   <div class="grow">
-    {# <img {{ craft.entries.section('globals').one().logo.one() }} class="h-12 w-12 ml-4"> #}
+    <a href="/" class="ml-5 w-fit transition-height duration-500 delay-200 block" :class="top ? 'h-9' : 'h-8'">
+      <img src="{{ craft.vite.asset('images/icon.svg') }}" class="xs:hidden h-full" alt="Unseen Artisan">
+      <img src="{{ craft.vite.asset('images/logo.svg') }}" class="hidden xs:block h-full" alt="Unseen Artisan">
+    </a>
   </div>
-  <div>
-    {{ craft.navigation.render('header') }}
-  </div>
+  <navigation class='px-4 sm:px-6 text-xl' x-data x-popover>
+    {{ craft.navigation.render('header', {
+      ulClass: 'hidden md:block',
+      liClass: 'inline-block hover:text-base-400',
+      activeClass: 'underline',
+      aClass: 'px-6 py-5',
+    }) }}
+    <button class="md:hidden p-4 hover:text-base-400" x-popover:button>
+      <span class="i-teenyicons-menu-solid w-6 h-6"></span>
+    </button>
+    {{ craft.navigation.render('header', {
+      ulClass: 'md:hidden absolute right-0 transition-spacing duration-500 delay-200 ' ~ (underHeader is defined ? 'bg-base-800/50 backdrop-blur-md' : 'bg-base-800'),
+      ulAttributes: {
+        'x-popover:panel': true,
+        ':class': 'top ? "mt-5" : "mt-4"',
+      },
+      liClass: 'hover:text-base-400',
+      aClass: 'px-6 py-5 block',
+    }) }}
+  </navigation>
+
 </header>

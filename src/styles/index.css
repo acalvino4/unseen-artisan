@@ -5,13 +5,33 @@
 
 @config '../../config/build/tailwind.config.ts';
 
+@layer base {
+  :focus-visible {
+    @apply outline-0 ring;
+  }
+}
+
 @layer utilities {
   /*
     Turns an image tag into the background image of it's parent element.
     See https://nystudio107.com/blog/the-css-background-image-property-as-an-anti-pattern.
   */
-  .bg {
-    @apply absolute w-full h-full object-cover inset-0 -z-10;
+  img.bg {
+    @apply absolute inset-0 -z-10 w-full h-full object-cover;
+  }
+
+  /*
+    Chromium browsers don't render nested backdrop filters.
+    As a workaround, add 'before:' to the outer filter, along with 'before:backdrop-hack':
+
+      <div class="before:backdrop-blur-md before:backdrop-hack>
+        <div class="backdrop-blur-md"></div>
+      </div>
+
+    See https://stackoverflow.com/a/76207141.
+  */
+  .backdrop-hack {
+    @apply absolute inset-0 -z-10;
   }
 }
 

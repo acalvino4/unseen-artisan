@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: true
+handle: pages
+name: Pages
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  0c8865cf-6d96-411d-a006-084bb1f2c88a: # unseenartisan
+    enabledByDefault: true
+    hasUrls: true
+    template: page/entry
+    uriFormat: '{slug}'
+type: channel

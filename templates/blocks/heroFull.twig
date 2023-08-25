@@ -1,0 +1,9 @@
+<div class='h-screen w-full relative flex flex-col justify-center items-end'>
+  {{ picture([pageBlock.backgroundImage.one(), 'hero'], 'bg brightness-50') }}
+  <div class="max-w-7xl mx-auto">
+    <div class="text-base-300 text-right w-full relative mt-7 p-5 md:px-6 lg:pl-11 ">
+      <h1 class="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl mb-6">{{ pageBlock.header }}</h1>
+      <a href="{{ pageBlock.ctaButton.link }}"><button class="bg-primary-400 hover:bg-primary-500 text-base-300 drop-shadow-lg text-3xl p-6">{{ pageBlock.ctaButton.text }}</button></a>
+    </div>
+  </div>
+</div>

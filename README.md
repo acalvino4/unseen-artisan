@@ -45,37 +45,6 @@ Local development requirements:
 - Absolute imports from src directory
 - oklch support
 
-### Creating New Project
-
-Run command to clone
-Be prompted for project name, and auto-update where possible
-commit all changes, run setup
-
-Manually, set cp trigger, email
-
-Ensure local development requirements are met. Then, just run
-
-`composer create-project --no-install acalvino4/boilerplate PATH`
-
-Some things need to be done manually since they are specific to each new project:
-
-- Replace all instances of "boilerplate" with your project name
-  - `package.json`
-  - `composer.json`
-  - `.env.example.dev`
-  - `.ddev/config.yaml`
-  - `.vscode/launch.json`
-  - `config/build/vite.config.ts`
-  - throughout `config/project` directory
-- Update `cpTrigger` in `config/general.php` to something interesting/appropriate for project
-- Update `email.fromEmail` in `config/project/project.yaml` to the appropriate email that should send system email
-- Update `<repo-url>` and `<project-name>` in local setup instructions
-- Follow favicon instructions at bottom of this doc
-- Delete or modify `LICENSE.md` as appropriate for your project
-- Delete this "Creating New Project" section
-- `git add -A; git commit -a -m "initial project scaffolding";`
-- `git remote add origin <repo-url>; git push;`
-
 ## Local Setup
 
 Ensure local dev requirments are met. Then, navigate to directory where you wish to setup project and run

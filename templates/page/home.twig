@@ -1,5 +1,9 @@
 {% extends 'common/wrapper' %}
 
+{% set underHeader = true %}
+
 {% block main %}
-  <h1>Unique Home Content</h1>
+  {% for pageBlock in entry.pageBlocks.all() %}
+    {{ include('blocks/' ~ pageBlock.type) }}
+  {% endfor %}
 {% endblock %}

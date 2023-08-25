@@ -23,7 +23,7 @@ return GeneralConfig::create()
     ->disallowRobots(!$isProd)
     ->privateTemplateTrigger('')
     ->errorTemplatePrefix('error/')
-    ->cpTrigger('CHANGEME')
+    ->cpTrigger('techwright')
     ->sendPoweredByHeader(false)
     ->aliases([
         '@web' => App::env('PRIMARY_SITE_URL'),

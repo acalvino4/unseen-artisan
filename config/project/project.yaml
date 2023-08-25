@@ -1,14 +1,14 @@
-dateModified: 1691602338
+dateModified: 1693006617
 email:
-  fromEmail: boilerplate@gmail.com
-  fromName: boilerplate
+  fromEmail: web@unseenartisan.com
+  fromName: 'Unseen Artisan'
   replyToEmail: null
-  template: ""
+  template: ''
   transportSettings:
     host: $MAILHOG_SMTP_HOSTNAME
     password: $MAILHOG_SMTP_PASSWORD
     port: $MAILHOG_SMTP_PORT
-    useAuthentication: "1"
+    useAuthentication: '1'
     username: $MAILHOG_SMTP_USER
   transportType: craft\mail\transportadapters\Smtp
 fs:
@@ -16,16 +16,29 @@ fs:
     hasUrls: true
     name: Main
     settings:
-      path: "@webroot/uploads"
+      path: '@webroot/uploads'
     type: craft\fs\Local
-    url: "@web/uploads"
+    url: '@web/uploads'
 meta:
   __names__:
-    0c8865cf-6d96-411d-a006-084bb1f2c88a: boilerplate # boilerplate
+    0c8865cf-6d96-411d-a006-084bb1f2c88a: unseenartisan # unseenartisan
+    0cfbd336-0af8-40a4-8281-543336874c0e: Subheader # Subheader
+    1e836fb4-33d4-4918-9184-10608fd98fb3: Default # Default
+    2cba8bb4-aeb2-4b90-a10e-220291685a16: 'CTA Button' # CTA Button
+    3a356351-45ec-458a-b473-8c6c09b611df: Features # Features
+    6d7193c5-6c28-4ce7-9da9-80be4805bcff: Features # Features
     8d1502bd-9991-4b16-b550-3761f6ed061c: Home # Home
+    23ac8fd6-7089-4d9a-9260-f658ae0c07d2: Header # Header
     884e6ef3-b1d0-4321-9994-93767a94b2e8: Home # Home
+    761093fa-1bbb-4bf1-92ca-2836468826bb: 'Hero Full' # Hero Full
     94625918-54bc-4e00-a797-2c1843796c67: Main # Main
-    e0761766-6736-49e9-9a5b-3d7b3a9e03f9: boilerplate # boilerplate
+    a38052db-a99f-4a66-9398-569f1b286b49: Body # Body
+    bf0d5b69-55c3-4ded-a2ce-fdfdbaf06d3f: Pages # Pages
+    c9f904a8-c667-4b0d-abb7-95461f86728e: 'Page Blocks' # Page Blocks
+    c545b349-f9b4-401c-83e7-828309c8f6c6: Header # Header
+    d9fd3316-bcad-4248-a539-7aa39613f8f5: 'Background Image' # Background Image
+    e0761766-6736-49e9-9a5b-3d7b3a9e03f9: unseenartisan # unseenartisan
+    e4b17e00-dff1-4fe1-9fd1-1c42b5e58e28: Header # Header
     eae6388b-45fe-4218-a084-a97310884eef: Common # Common
 plugins:
   blur-hash:
@@ -40,6 +53,11 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.1
+  hyper:
+    edition: standard
+    enabled: true
+    licenseKey: 5A41E3YFN6SSRAPZGA13GQME
+    schemaVersion: 1.0.0
   navigation:
     edition: standard
     enabled: true
@@ -61,9 +79,9 @@ plugins:
 system:
   edition: pro
   live: true
-  name: boilerplate
+  name: unseenartisan
   retryDuration: null
-  schemaVersion: 4.4.0.4
+  schemaVersion: 4.5.0.3
   timeZone: America/Denver
 users:
   allowPublicRegistration: false

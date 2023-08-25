@@ -1,0 +1,130 @@
+field: c9f904a8-c667-4b0d-abb7-95461f86728e # Page Blocks
+fieldLayouts:
+  2f0f62a1-a9b9-4667-b938-8d9705035399:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: c545b349-f9b4-401c-83e7-828309c8f6c6 # Header
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0b6aa275-bce9-46db-8ea7-e3264df32d9b
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: a38052db-a99f-4a66-9398-569f1b286b49 # Body
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6146b194-21f3-4979-93db-b53d0e25f29e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6d7193c5-6c28-4ce7-9da9-80be4805bcff # Features
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 22816d44-efae-4edd-9eb3-5c463da1f8ec
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 9a525280-d2ae-4767-bc6a-c0a4a84c5c5d
+        userCondition: null
+fields:
+  6d7193c5-6c28-4ce7-9da9-80be4805bcff: # Features
+    columnSuffix: nzpkdvzz
+    contentColumnType: text
+    fieldGroup: null
+    handle: features
+    instructions: null
+    name: Features
+    searchable: false
+    settings:
+      addRowLabel: 'Add a row'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Title
+                -
+                  - handle
+                  - title
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+      maxRows: null
+      minRows: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+  a38052db-a99f-4a66-9398-569f1b286b49: # Body
+    columnSuffix: pdnszfwg
+    contentColumnType: text
+    fieldGroup: null
+    handle: body
+    instructions: null
+    name: Body
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  c545b349-f9b4-401c-83e7-828309c8f6c6: # Header
+    columnSuffix: czhqpxbc
+    contentColumnType: text
+    fieldGroup: null
+    handle: header
+    instructions: null
+    name: Header
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: features
+name: Features
+sortOrder: 2

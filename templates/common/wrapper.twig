@@ -5,13 +5,18 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     {{ craft.vite.script("src/scripts/index.ts", false, {defer: true}) }}
     {# Begin favicon #}
-    <link rel="icon" href="{{ craft.vite.asset('favicon/favicon.ico', true) }}" sizes="any">
+    <link rel="icon" href="{{ craft.vite.asset('favicon/favicon.ico', true) }}" sizes="32x32">
     <link rel="icon" href="{{ craft.vite.asset('favicon/favicon.svg', true) }}" type="image/svg+xml">
     <link rel="apple-touch-icon" href="{{ craft.vite.asset('favicon/favicon-180.png', true) }}">
     <link rel="manifest" href="/manifest.webmanifest">
     {# End favicon #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wdth,wght,GRAD@0,8..144,50..150,100..900,-50..100;1,8..144,50..150,100..900,-50..100&display=swap" rel="stylesheet">
   </head>
-  <body class="flex flex-col min-h-screen">
+  <body x-data="{top: true}" class="flex flex-col min-h-screen ring-primary bg-base-800 text-base-300 font-primary">
+    {# An invisible pixel that fires events when scroll position reaches/leaves the top #}
+    <div x-intersect:enter="top = true" x-intersect:leave.margin.115="top = false" class="absolute h-1 invisible"></div>
     {% include 'common/header' %}
     <main class='grow flex flex-col'>
       {% block main %}
